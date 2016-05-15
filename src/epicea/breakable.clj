@@ -77,7 +77,7 @@
         (contains? eset x))))
 
 (defn contains-expect? [x]
-  (when (contains-recursive? x #{'malen.core/expect})
+  (when (contains-recursive? x #{'epicea.breakable/expect 'epicea.breakable/cancel})
     (println "expect is forbidden in subtree " (str x) " but that is violated")
     true))
 

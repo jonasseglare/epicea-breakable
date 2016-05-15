@@ -205,7 +205,7 @@
     (is (contains-recursive? [[[[{:a [:b 13 4 5 #{:a :b :mjao}]}]]]] #{:mjao}))
 
     (is (try
-          (build '(loop [a 1 b 2] (malen.core/expect number? 9)) [nil])
+          (build '(loop [a 1 b 2] (epicea.breakable/expect number? :abbbbbbbbb)) [nil])
           false
           (catch Throwable e
             true)))
